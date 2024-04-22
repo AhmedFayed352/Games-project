@@ -37,7 +37,7 @@ export class Ui {
                                 <p>Platform: <span class="badge text-bg-info">${data.platform}</span></p>
                                 <p>Status: <span class="badge text-bg-info">${data.status}</span></p>
                                 <p class="small">${data.description}</p>
-                                <a href="#" class="btn btn-outline-warning" target="_blank" href="${data.game_url}">Show Game</a>
+                                <a class="btn btn-outline-warning" target="_blank" href="${data.game_url}">Show Game</a>
                             </div>`;
     document.getElementById("detailsContent").innerHTML = dataContent;
     }
