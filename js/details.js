@@ -21,15 +21,12 @@ export class Details {
       },
     };
 
-    fetch(
+    const api = await fetch(
       `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${gamesId}`,
       options
-    )
-      .then((response) => response.json())
-      .then((response) => this.ui.displayDetails(response))
-      .catch((err) => console.error(err))
-      .finally(() => {
-        loading.classList.add("d-none");
-      });
+    );
+    const response = await api.json();
+    this.ui.displayDetails(response);
+    loading.classList.add("d-none");
   }
 }
